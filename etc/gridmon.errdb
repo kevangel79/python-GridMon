@@ -1,0 +1,258 @@
+##############################################################################
+#
+# NAME:        gridmon.errdb
+#
+# FACILITY:    SAM (Service Availability Monitoring)
+#
+# DESCRIPTION:
+#
+#         Collection of gLite m/w CLI and API error messages broken down into
+#         categories. In each category the error messages are split into
+#         client/server side errors with respective Nagios statuses assigned.
+#         The file is in .INI format.
+#
+# AUTHORS:     Konstantin Skaburskas, CERN
+#
+# CREATED:     26-Jan-2010
+#
+# NOTES:
+#
+# MODIFIED:
+#
+##############################################################################
+[default]
+client_status = UNKNOWN
+client:
+ command not found|
+ Your proxy credential has expired|
+ Unable to find a valid proxy file|
+ Bad credentials|
+ Host not known
+
+[lfc]
+client_status = UNKNOWN
+client:
+ Could not find or use a credential|
+ Host not known
+
+server_status = CRITICAL
+server:
+ Lets check
+
+[lcg_util]
+client_status = UNKNOWN
+client:
+ Could NOT load client credentials|
+ Bad credentials|
+ Host not known
+
+clientw_status = WARNING
+clientw:
+ Segmentation fault
+
+server_status = CRITICAL
+server:
+ User timeout over|
+ Error reading token data header: Connection closed|
+ Error reading token data header: Connection reset by peer|
+ No such file or directory|
+ No write pool available for|
+ Error initializing context|
+ General failure|
+ No entries for host|
+ Read-only file system|
+ Invalid SURL specified|
+ Communication error on send|
+ Permission denied|
+ Connection closed|
+ Client transport failed to execute the RPC|
+ No GlueSA information found|
+ server responded with an error|
+ globus_xio: An end of file occurred|
+ user has no permission to write into|
+ Could not open connection|
+ No write pool available|
+ Protocol(s) not supported|
+ Protocol(s) specified not supported|
+ VOMS error when processing cert|
+ Error caught in srm::getSrmUser|
+ does not match grid mapping|
+ SRM_INVALID_PATH|
+ Unable to map request to space for policy
+
+[lcg_util_wn]
+clientc_status = CRITICAL
+client:
+ Could NOT load client credentials|
+ Bad credentials|
+ Can't contact LDAP server|
+ No accessible BDII|
+ Host not known|
+ Could not load a security plugin
+
+#client_status = WARNING
+#client:
+# # good for WN-RepRep, but bad for WN-RepCr
+# BDII.*No entries for host
+
+server_status = CRITICAL
+server:
+ User timeout over|
+ Error reading token data header: Connection closed|
+ Error reading token data header: Connection reset by peer|
+ No such file or directory|
+ No write pool available for|
+ Error initializing context|
+ General failure|
+ No entries for host|
+ Read-only file system|
+ Invalid SURL specified|
+ Communication error on send|
+ Permission denied|
+ Connection closed|
+ Client transport failed to execute the RPC|
+ No GlueSA information found|
+ server responded with an error|
+ globus_xio: An end of file occurred|
+ user has no permission to write into|
+ Could not open connection|
+ No write pool available|
+ Protocol(s) not supported|
+ Protocol(s) specified not supported|
+ VOMS error when processing cert|
+ Error caught in srm::getSrmUser|
+ does not match grid mapping|
+ SRM_INVALID_PATH|
+ Unable to map request to space for policy
+
+[bdii_wn]
+clientc_status = CRITICAL
+clientc:
+ Can't contact LDAP server
+
+[wms]
+client_status = UNKNOWN
+client:
+ cannot parse classad|
+ Your proxy credential has expired|
+ Proxy certificate validity expired|
+ Unable to find a valid proxy file|
+ The delegated Proxy has expired|
+ System load is too high|
+ temporarily drained
+
+serverc_status = CRITICAL
+serverc:
+ alert certificate expired|
+ Connection timed out|
+ certificate host name mismatch|
+ Unable to find any endpoint where to perform service request
+
+serverw_status = WARNING
+serverw:
+ System load is too high
+
+[ce_wms]
+client_status = UNKNOWN
+client:
+ cannot parse classad|
+ Your proxy credential has expired|
+ Proxy certificate validity expired|
+ Unable to find a valid proxy file|
+ The delegated Proxy has expired|
+ System load is too high|
+ temporarily drained|
+ Unable to find any endpoint where to perform service request|
+ Unable to retrieve the output|
+ Output files already retrieved
+
+server_status = CRITICAL
+server:
+
+[creamce_wms]
+client_status = UNKNOWN
+client:
+ cannot parse classad|
+ Your proxy credential has expired|
+ Proxy certificate validity expired|
+ Unable to find a valid proxy file|
+ The delegated Proxy has expired|
+ System load is too high|
+ temporarily drained|
+ Unable to find any endpoint where to perform service request|
+ Unable to retrieve the output|
+ Output files already retrieved
+
+serverc_status = CRITICAL
+serverc:
+ Connection to service.*failed|
+ EOF detected during communication
+
+serverw_status = WARNING
+serverw:
+
+serveru_status = UNKNOWN
+serveru:
+
+[creamce]
+client_status = UNKNOWN
+client:
+
+server_status = CRITICAL
+server:
+
+[creamce_ws]
+client_status = UNKNOWN
+client:
+ urlopen error SSL_CTX_use_PrivateKey_file error|
+ alert certificate unknown|
+ The proxy is EXPIRED
+
+serverc_status = CRITICAL
+serverc:
+ Connection to service.*failed|
+ EOF detected during communication|
+ Connection refused
+
+serverw_status = WARNING
+serverw:
+
+serveru_status = UNKNOWN
+serveru:
+
+[creamce_cli]
+client_status = UNKNOWN
+client:
+ Problems with proxyfile.*The proxy is EXPIRED|
+ JDL File.*missing on disk|
+ The proxy is EXPIRED
+
+serverc_status = CRITICAL
+serverc:
+ Connection to service.*failed|
+ EOF detected during communication|
+ FaultCause.*Batch System.*not supported|
+ Description.*system error|
+ Cannot configure AuthorizationHandler|
+ FaultString.*Server Error|
+ FailureReason.*BLAH error
+
+serverw_status = WARNING
+serverw:
+
+serveru_status = UNKNOWN
+serveru:
+
+[myproxy]
+client_status = UNKNOWN
+client:
+
+server_status = CRITICAL
+server:
+
+[voms]
+client_status = UNKNOWN
+client:
+
+server_status = CRITICAL
+server:

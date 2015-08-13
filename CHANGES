@@ -1,0 +1,40 @@
+* Thu Nov 18 2010 K. Skaburskas <Konstantin.Skaburskas@cern.ch> - 1.1.12-1
+- fixed bugs
+  * SAM-285: proxy check should be made optional in the execution framework
+  * SAM-888: long option --verbose is not working for probes
+* Wed Oct 27 2010 K. Skaburskas <Konstantin.Skaburskas@cern.ch> - 1.1.11-1
+- fixed bugs
+  * SAM-892: tolerate segfault in lcg_gt3() by moving to lcg-gt CLI
+* Wed Jul 28 2010 K. Skaburskas <Konstantin.Skaburskas@cern.ch> - 1.1.10-1
+- fixed bugs
+  * SAM-508: better handling of timeouts in complex metrics
+* Tue Jun 22 2010 K. Skaburskas <Konstantin.Skaburskas@cern.ch> - 1.1.9-1
+- fixed bugs:
+  * SAM-503: probes working directory changed to /var/lib/gridprobes
+* Thu May 20 2010 K. Skaburskas <Konstantin.Skaburskas@cern.ch> - 1.1.8-5
+- to make all WNs happy removing network timeout in ldapsearch CLI in
+  discovery of "good" BDII
+- better handling of aliased hostnames in DNS lookups in gridmon.utils
+* Tue May 18 2010 K. Skaburskas <Konstantin.Skaburskas@cern.ch> - 1.1.8-3
+- had to remove usage of decorator in grimon.nagios.perfdata module.
+- fixing strings manipulation to be Python 2.3 compliant
+- from now on unit tests will be run with Python 2.3
+* Mon May 10 2010 K. Skaburskas <Konstantin.Skaburskas@cern.ch> - 1.1.8-1
+- fixed bugs
+  * SAM-163: Report the IP of the TOP-BDII used for WN probes
+  * SAM-440: org.sam-*-JobMonit checks should provide performance data
+* Thu Mar 25 2010 K. Skaburskas <Konstantin.Skaburskas@cern.ch> - 1.1.7-1
+- 'template' module with handy classes for file based templating
+* Thu Mar 18 2010 K. Skaburskas <Konstantin.Skaburskas@cern.ch> - 1.1.6-1
+- added --vo-fqan option to Job{State,Monit} for FQAN based jobs submission
+- fixed bugs:
+  * 64362 Printout of actual list VOMS FQANs in VO dependent metrics
+* Tue Mar 09 2010 K. Skaburskas <Konstantin.Skaburskas@cern.ch> - 1.1.5-1
+- better treatment of summary and details data
+- new sections in errors DB - [lcg_util_wn] and [bdii_wn]
+- refactored gridmon.{gridutils,utils} modules
+* Tue Feb 16 2010 K. Skaburskas <Konstantin.Skaburskas@cern.ch> - 1.1.4-1
+- changed names of main configuration file and errors DB to
+  gridmon.{conf,errdb}.
+- more granular definition of the full path for probes/metrics working
+  directories.
