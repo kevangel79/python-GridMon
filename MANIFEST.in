@@ -2,3 +2,4 @@ include etc/gridmon.errdb
 include etc/gridmon.conf
 include etc/nagios-submit.conf
 include CHANGES
+include python-GridMon.spec
