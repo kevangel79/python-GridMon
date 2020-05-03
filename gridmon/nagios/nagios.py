@@ -143,6 +143,7 @@ def publishPassiveResultNAGCMD(nagcmd, reslist):
     timenow = str(int(time.time()))
     for r in reslist:
         fn.write('[%s] PROCESS_SERVICE_CHECK_RESULT;%s\n' % (timenow, r))
+        fn.flush()
     fn.close()
 
 def publishPassiveResult(attrs, modefile=PASSIVE_MODE_FILE):

@@ -509,7 +509,7 @@ Reporting passive checks (when used with wrapper checks)
     fqan = property(__get_fqan, __set_fqan)
 
     def __norm_fqan(self, fqan):
-        return re.sub('/','.',fqan.strip('/'))
+        return re.sub('/|=','.',fqan.strip('/'))
 
     def parse_cmd_args(self, tuples, cmdopts=None, func=None):
         """Parse metric's command arguments.
