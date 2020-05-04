@@ -59,6 +59,10 @@ rm -rf $RPM_BUILD_ROOT
 %doc CHANGES
 
 %changelog
+* Fri Jun 30 2017 Marian Babik <Marian.Babik@cernc.h> - 1.1.15-1
+- Added an explicit flush to cmd pipe
+* Fri Nov 06 2015 Marian Babik <Marian.Babik@cernc.h> - 1.1.14-1
+- Removing equals sign from probe var directory
 * Mon Jan 14 2013 Marian Babik <Marian.Babik@cern.ch> - 1.1.13-1
 - SAM-3091 Added nagios-submit configuration file 
 * Thu Nov 18 2010 K. Skaburskas <Konstantin.Skaburskas@cern.ch> - 1.1.12-1
